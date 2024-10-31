@@ -1,0 +1,294 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #008cba;
+}
+
+a:hover {
+    color: #005f7a;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+/* Encabezado */
+header {
+    background-color: #ff5722;
+    color: white;
+    padding: 2% 0; /* Ajustado a porcentaje */
+    text-align: center;
+    display: block;
+   
+}
+
+.logo-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 20vh;
+    width: 8vh; /* Ajustado a porcentaje para adaptarse al tamaño de la pantalla */
+    height: auto; /* Mantener relación de aspecto */
+    margin-right: 1.5%; /* Ajustado a porcentaje */
+}
+
+header h1 {
+    font-size: 4vw; /* "vw" se ajusta al ancho de la pantalla */
+    margin: 0;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    padding: 2%; /* Ajustado a porcentaje */
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+}
+
+/* Lateral */
+aside {
+    flex: 1;
+    background-color: #e0f7fa;
+    padding: 2%; /* Ajustado a porcentaje */
+    margin-right: 2%; /* Ajustado a porcentaje */
+    border-radius: 0%;
+
+    
+}
+
+aside h3 {
+    margin-bottom: 10%; /* Ajustado a porcentaje */
+    color: #00796b;
+}
+aside img {
+    width: 100%; /* Ya está en porcentaje */
+    border-radius: 10%;
+    margin-bottom: 5%; /* Ajustado a porcentaje */
+    transition: transform 0.3s ease;
+}
+
+aside img:hover {
+    transform: scale(1.1);
+}
+
+/* Cuerpo principal */
+main {
+    flex: 3;
+}
+
+main h2 {
+    font-size: 3vw; /* Usando 'vw' para ajustar al ancho de la pantalla */
+    margin-bottom: 1%; /* Ajustado a porcentaje */
+    color: #000000;
+}
+
+main p {
+    margin-bottom: 2%; /* Ajustado a porcentaje */
+}
+
+.galeria {
+   display: grid; 
+   grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */ 
+   /* gap: 1%;*/ /* Ajustado a porcentaje */ 
+    margin-bottom: 1%; /* Ajustado a porcentaje */
+    
+    flex: 1;
+    background-color: #e0f7fa;
+    padding: 2%; /* Ajustado a porcentaje */
+    margin-right: 2%; /* Ajustado a porcentaje */
+    border-radius: 0%;
+}
+
+
+.galeria img {
+    width: 100%; /* Ya está en porcentaje */
+    border-radius: 5%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.9;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    opacity: 0.5%
+}
+.robot {
+   
+    background-color: #e0f7fa;
+    padding: 2%; /* Ajustado a porcentaje */
+    margin-right: 2%; /* Ajustado a porcentaje */
+    border-radius: 2%;
+    overflow: hidden;
+
+    display: grid;
+	grid-template-columns: min-content auto;
+	grid-template-rows: auto auto;
+	gap: 1rem 1rem;
+
+    
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #f9fbe7;
+    padding: 2%; /* Ajustado a porcentaje */
+    border-left: 1% solid #cddc39; /* Ajustado a porcentaje */
+    margin: 2% 0; /* Ajustado a porcentaje */
+}
+
+ul {
+    list-style: circle inside;
+}
+
+ul li {
+    margin: 1% 0; /* Ajustado a porcentaje */
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 5%; /* Ajustado a porcentaje */
+    text-align: left;
+}
+
+footer .mapa-web ul {
+    list-style: none;
+    margin-bottom: 2%; /* Ajustado a porcentaje */
+}
+
+footer .mapa-web ul li {
+    margin-bottom: 1%; /* Ajustado a porcentaje */
+    text-align: left;
+}
+
+footer .contacto p {
+    margin: 1% 0; /* Ajustado a porcentaje */
+}
+
+footer a {
+    color: #ff9800;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    /* Para tabletas */
+    .contenedor {
+        flex-direction: column; /* Cambia el diseño a columnas para tabletas */
+    }
+
+    aside {
+        margin-right: 2%;
+        margin-bottom: 2%; /* Ajustado a porcentaje */
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 columnas en tabletas */
+       
+    }
+
+    header h1 {
+        font-size: 5vw; /* Ajuste usando 'vw' */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5% 0; /* Ajustado a porcentaje */
+    }
+}
+
+@media (max-width: 768px) { /*mobile*/
+
+
+    .contenedor {
+        padding: 1%;
+        flex-direction: column; /* Pone el aside abajo */
+        font-size: 1.2rem;
+    }
+
+    aside {
+        margin-right: 0; /* Eliminamos márgenes grandes */
+        margin-bottom: 10vh; /* Reducimos el margen inferior */
+        min-height: max-content;
+    }
+
+    header h1 {
+        font-size: 7vw; /* Ajuste usando 'vw' */
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        width: 68vh;
+    }
+
+
+    .galeria {
+        /* 
+        display: grid;
+        grid-template-columns: 1fr; */
+        display: grid;
+        grid-template-columns: 1fr; /* 1 columna en móviles para evitar que las imágenes sean demasiado pequeñas */
+        margin-bottom: 2%; /* Reducimos espacio extra */
+        
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        display: flex;
+        margin: 5% 0; /* Ajustado a porcentaje */
+    }
+
+    main h2 {
+        font-size: 5.5vw; /* Ajuste usando 'vw' */
+        line-height: 1.8; /* Mejorar el espaciado entre líneas */
+        text-align: center;
+    }
+
+    main p {
+        font-size: 4vw; /* Aumentar el tamaño de los párrafos para facilitar la lectura */
+        line-height: 1.8; /* Mejorar el espaciado entre líneas */
+        font-size: 1.2rem;
+        
+    }
+
+    aside img {
+        width: 100%;
+    }
+
+    .netart-canvas {
+        width: 60vh;
+    }
+
+    footer {
+        font-size: 1.2rem;
+        width: 68vh;
+        padding: 3%;
+        text-align: center;
+    }
+}
